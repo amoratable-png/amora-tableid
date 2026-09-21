@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7d9e5">
+  <meta name="description" content="Amora Table — undangan digital cantik, elegan, dan mudah dibagikan.">
+  <title>Amora Table — Undangan Digital</title>
+  <style>
+    :root{
+      --pink:#d9799e;--pink2:#f6dce7;--rose:#fff6f9;--ink:#392c33;
+      --muted:#776a71;--white:#fff;--line:#ead9e0;--shadow:0 18px 50px rgba(83,48,63,.10);
+      --radius:24px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff}
+    a{text-decoration:none;color:inherit} button{font:inherit}
+    .wrap{width:min(1120px,92%);margin:auto}
+    nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(234,217,224,.7)}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:Georgia,serif;font-size:25px;font-weight:700;letter-spacing:.2px}.brand span{color:var(--pink)}
+    .navlinks{display:flex;gap:25px;color:#665860;font-size:14px}.navlinks a:hover{color:var(--pink)}
+    .navcta{padding:11px 17px;border-radius:999px;background:var(--pink);color:white;font-weight:700;font-size:14px}
+    .hero{background:radial-gradient(circle at 10% 10%,#ffeef5 0,#fff8fa 35%,#fff 70%);padding:72px 0 65px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px}
+    .eyebrow{display:inline-flex;padding:8px 13px;border:1px solid #f0c9d8;background:#fff;border-radius:999px;color:#ad5578;font-size:12px;font-weight:800;letter-spacing:.5px}
+    h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,72px);line-height:1.03;margin:18px 0 18px;letter-spacing:-2px}
+    h1 em{color:var(--pink);font-style:normal}
+    .lead{font-size:18px;line-height:1.7;color:var(--muted);max-width:590px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;font-weight:800;border:1px solid var(--line)}
+    .primary{background:var(--pink);color:#fff;border-color:var(--pink);box-shadow:0 12px 28px rgba(217,121,158,.25)}
+    .secondary{background:#fff;color:var(--ink)}
+    .trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;color:#8a7b83;font-size:12px}
+    .mock{position:relative}.phone{width:min(330px,80vw);margin:auto;background:#201b1d;border:8px solid #201b1d;border-radius:38px;padding:9px;box-shadow:0 28px 65px rgba(62,35,47,.22);transform:rotate(2deg)}
+    .screen{background:linear-gradient(150deg,#fff8fb,#f9e2eb);border-radius:27px;overflow:hidden;min-height:590px;padding:26px 18px;display:flex;flex-direction:column;align-items:center;text-align:center}
+    .screen .mini{font-size:11px;letter-spacing:2px;color:#a45c79}.screen h2{font-family:Georgia,serif;font-size:36px;margin:28px 0 8px}.screen p{color:#806f77;font-size:13px}
+    .names{font-family:Georgia,serif;font-size:22px;margin:28px 0}.date{padding:10px 18px;border:1px solid #e5bdcc;border-radius:999px;background:#fff;font-size:12px}
+    .section{padding:85px 0}.soft{background:var(--rose)}
+    .center{text-align:center}.section h2{font-family:Georgia,serif;font-size:clamp(32px,4vw,46px);margin:10px 0}.sub{color:var(--muted);line-height:1.7;max-width:650px;margin:0 auto 38px}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{padding:25px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .icon{width:46px;height:46px;border-radius:15px;background:var(--pink2);display:grid;place-items:center;font-size:21px;margin-bottom:18px}.card h3{margin:0 0 8px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+    .offer{display:grid;grid-template-columns:1fr .85fr;gap:45px;align-items:center}.check{list-style:none;padding:0;margin:25px 0}.check li{margin:12px 0;color:#5e5057}.check li:before{content:"✓";display:inline-grid;place-items:center;width:23px;height:23px;margin-right:10px;border-radius:50%;background:#f5d9e5;color:#ae5e7d;font-weight:900}
+    .pricebox{background:#fff;border:1px solid #edd6df;border-radius:30px;padding:32px;box-shadow:var(--shadow)}.badge{display:inline-block;background:#f8e0e9;color:#a54d72;padding:7px 11px;border-radius:999px;font-size:11px;font-weight:900}.price{font-family:Georgia,serif;font-size:50px;margin:12px 0}.price small{font-family:inherit;font-size:18px;color:#8c7d84}.note{font-size:12px;color:#897a82}
+    .themes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.theme{border-radius:24px;overflow:hidden;border:1px solid var(--line);background:#fff}.theme-img{height:220px;display:grid;place-items:center;font-family:Georgia,serif;font-size:27px}.t1{background:linear-gradient(135deg,#fbe8ef,#fff)}.t2{background:linear-gradient(135deg,#eee7df,#fff)}.t3{background:linear-gradient(135deg,#e9f0ed,#fff)}.theme-info{padding:17px;font-weight:800}.theme-info span{display:block;color:#91838a;font-size:12px;font-weight:500;margin-top:5px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:25px;border-radius:24px;background:#fff;border:1px solid var(--line)}.num{font-family:Georgia,serif;font-size:34px;color:var(--pink)}
+    .cta{padding:75px 0;background:linear-gradient(135deg,#f7dbe6,#fff1f6)}.cta h2{font-family:Georgia,serif;font-size:44px;margin:0 0 12px}.cta p{color:var(--muted);margin-bottom:25px}
+    footer{padding:30px 0;border-top:1px solid var(--line);color:#897a82;font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:850px){.navlinks{display:none}.hero-grid,.offer{grid-template-columns:1fr}.hero{padding-top:48px}.mock{margin-top:15px}.cards{grid-template-columns:repeat(2,1fr)}.themes{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.section{padding:65px 0}}
+    @media(max-width:520px){.cards,.themes{grid-template-columns:1fr}.navin{height:64px}.navcta{padding:10px 13px}.hero{padding-bottom:45px}.lead{font-size:16px}.phone{min-height:0}.screen{min-height:520px}.price{font-size:43px}}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="wrap navin">
+    <a class="brand" href="#">Amora <span>Table</span></a>
+    <div class="navlinks"><a href="#fitur">Fitur</a><a href="#tema">Tema</a><a href="#cara">Cara Kerja</a><a href="#harga">Harga</a></div>
+    <a class="navcta" href="https://wa.me/6289634696288?text=Halo%20Amora%20Table%2C%20saya%20mau%20pesan%20undangan%20digital." target="_blank">Pesan Sekarang</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">UNDANGAN DIGITAL • AMORA TABLE</div>
+      <h1>Rayakan cinta,<br><em>bagikan ceritanya.</em></h1>
+      <p class="lead">Undangan digital cantik dan elegan untuk hari spesialmu. Lengkap dengan kisah cinta, galeri, ucapan, streaming, dan fitur yang bisa kamu pilih sesuai kebutuhan.</p>
+      <div class="actions">
+        <a class="btn primary" href="#harga">Mulai Rp75.000 →</a>
+        <a class="btn secondary" href="#tema">Lihat Tema</a>
+      </div>
+      <div class="trust"><span>♡ Bisa dibuka di HP</span><span>✦ Mudah dibagikan</span><span>♡ Pilih tema</span></div>
+    </div>
+    <div class="mock">
+      <div class="phone"><div class="screen">
+        <div class="mini">THE WEDDING OF</div>
+        <h2>Reny & Ibnu</h2>
+        <p>17 Oktober 2026</p>
+        <div class="names">A beautiful beginning<br>of forever.</div>
+        <div class="date">OPEN INVITATION</div>
+        <p style="margin-top:auto">Dengan penuh kebahagiaan,<br>kami mengundang Anda.</p>
+      </div></div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="fitur">
+  <div class="wrap center">
+    <div class="eyebrow">YANG KAMU DAPATKAN</div>
+    <h2>Lebih dari sekadar undangan</h2>
+    <p class="sub">Buat undangan yang terasa personal dan lengkap. Kamu bebas memilih fitur yang ingin ditampilkan.</p>
+    <div class="cards">
+      <div class="card"><div class="icon">♡</div><h3>Story Instagram</h3><p>Bagikan momen dan detail undangan dengan format yang cocok untuk Instagram Story.</p></div>
+      <div class="card"><div class="icon">✦</div><h3>Kisah Cinta</h3><p>Ceritakan perjalanan kalian dari awal bertemu sampai menuju hari bahagia.</p></div>
+      <div class="card"><div class="icon">✉</div><h3>Ucapan & Doa</h3><p>Tamu bisa meninggalkan ucapan dan doa untuk pasangan.</p></div>
+      <div class="card"><div class="icon">▶</div><h3>Streaming</h3><p>Sediakan akses live streaming agar keluarga dan teman tetap bisa ikut menyaksikan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="harga">
+  <div class="wrap offer">
+    <div>
+      <div class="eyebrow">PROMO AMORA TABLE</div>
+      <h2>Undangan digital mulai<br>Rp75.000</h2>
+      <p class="sub" style="margin:0;text-align:left">Tampil elegan tanpa harus ribet. Cocok untuk kamu yang ingin undangan modern, praktis, dan mudah dibagikan.</p>
+      <ul class="check">
+        <li>Desain undangan responsive untuk HP</li><li>Pilihan tema cantik</li><li>Kisah cinta & galeri foto</li><li>Ucapan & doa tamu</li><li>Link lokasi & informasi acara</li><li>Story Instagram, streaming, dan fitur pilihan</li>
+      </ul>
+    </div>
+    <div class="pricebox">
+      <span class="badge">HARGA PROMO</span>
+      <div class="price">Rp75.000 <small>/ undangan</small></div>
+      <p class="note">Harga promo dapat berubah. Detail paket dan fitur dikonfirmasi melalui admin.</p>
+      <a class="btn primary" style="width:100%;margin-top:18px" href="https://wa.me/6289634696288?text=Halo%20Amora%20Table%2C%20saya%20mau%20pesan%20undangan%20digital%20promo%20Rp75.000." target="_blank">Pesan via WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tema">
+  <div class="wrap center">
+    <div class="eyebrow">PILIH SESUAI GAYAMU</div>
+    <h2>Tema untuk setiap cerita</h2>
+    <p class="sub">Mulai dari yang manis dan romantis sampai minimalis dan elegan.</p>
+    <div class="themes">
+      <div class="theme"><div class="theme-img t1">Reny & Ibnu</div><div class="theme-info">Romantic Blush<span>Manis • floral • romantis</span></div></div>
+      <div class="theme"><div class="theme-img t2">The Wedding</div><div class="theme-info">Classic Elegant<span>Timeless • clean • elegan</span></div></div>
+      <div class="theme"><div class="theme-img t3">Our Beginning</div><div class="theme-info">Modern Minimal<span>Simple • modern • fresh</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="cara">
+  <div class="wrap center">
+    <div class="eyebrow">GAMPANG BANGET</div>
+    <h2>3 langkah menuju undanganmu</h2>
+    <p class="sub">Kamu tidak perlu pusing mengurus semuanya sendiri.</p>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Pilih tema</h3><p>Temukan tampilan yang paling cocok dengan konsep acara kamu.</p></div>
+      <div class="step"><div class="num">02</div><h3>Kirim data</h3><p>Kirim data acara, foto, musik, dan informasi lain yang ingin dimasukkan.</p></div>
+      <div class="step"><div class="num">03</div><h3>Undangan siap</h3><p>Bagikan link undangan ke keluarga, sahabat, dan tamu undangan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap center">
+    <h2>Siap membuat undanganmu?</h2>
+    <p>Mulai cerita indahmu bersama Amora Table.</p>
+    <a class="btn primary" href="https://wa.me/6289634696288?text=Halo%20Amora%20Table%2C%20saya%20tertarik%20dengan%20undangan%20digital." target="_blank">Chat Amora Table ♡</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot"><div><strong>Amora Table</strong> — Digital Invitation</div><div>© 2026 Amora Table. Made with ♡</div></div>
+</footer>
+</body>
+</html>
